@@ -1,0 +1,28 @@
+{
+  "name": "web-services",
+  "version": "1.0.0",
+  "description": "Preperation for Web Services",
+  "main": "server.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JmmonJeremy/Node-Web-Services.git"
+  },
+  "author": "Jeremy Suchanski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JmmonJeremy/Node-Web-Services/issues"
+  },
+  "homepage": "https://github.com/JmmonJeremy/Node-Web-Services#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
