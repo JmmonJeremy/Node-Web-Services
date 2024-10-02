@@ -40,9 +40,9 @@ const getSpecificContact = async (req, res, next) => {
     console.log("Connected to DB:", db.databaseName); 
     // Get the "user" "collection" in other words table
     const collection = db.collection('contacts'); 
-    // Get all "documents" in other words table rows or entries  
+    // Get a specific entry from the "document"  
     const result = await collection.find({ _id: contactId });
-    // Turn each entry into an item in a list 
+    // Turn the matching entry into an item in a list 
     const contactsInfoList = await result.toArray();
     // See if there is anyting in the table or "collection" & report
     var entries = contactsInfoList.length;
@@ -52,7 +52,7 @@ const getSpecificContact = async (req, res, next) => {
     } else {
       console.log(`There is "${entries}" matching contact in the contacts collection.`)
     } 
-    // Get & report the name of the 1st entry in the collection
+    // Get & report the name of the 1st entry in the collection - the only entry
     console.log(`"${contactsInfoList[0].firstName} ${contactsInfoList[0].lastName}" is the "first & last Name" for the matching contact in the "contacts collection entry"`);
     // Set header and get 1st entry
     res.setHeader('Content-Type', 'application/json');
